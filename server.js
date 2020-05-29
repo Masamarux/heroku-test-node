@@ -6,7 +6,7 @@ const port = process.env.port || 3000
 app.use(bodyParse.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
 
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
     res.render('index.ejs')
 })
 
