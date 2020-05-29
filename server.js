@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParse = require('body-parser')
 const app = express()
+const port = process.env.port || 3000
 
 app.use(bodyParse.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
@@ -13,6 +14,6 @@ app.post('/show', (req, res) =>{
     console.log(req.body)
 })
 
-app.listen(3000, function() {
+app.listen(port, function() {
     console.log('server rodando')
 })
